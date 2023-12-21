@@ -1,0 +1,3 @@
+{
+  "/admin/promo/[promoId]/editPromo": "pages/admin/promo/[promoId]/editPromo.js"
+}

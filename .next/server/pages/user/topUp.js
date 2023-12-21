@@ -1,0 +1,9 @@
+const CHUNK_PUBLIC_PATH = "server/pages/user/topUp.js";
+const runtime = require("../../chunks/[turbopack]_runtime.js");
+runtime.loadChunk("server/chunks/node_modules_axios_108475._.js");
+runtime.loadChunk("server/chunks/node_modules_mime-db_b69a5f._.js");
+runtime.loadChunk("server/chunks/node_modules_@heroicons_react_24_solid_esm_8d4aaf._.js");
+runtime.loadChunk("server/chunks/node_modules_06a5a9._.js");
+runtime.loadChunk("server/chunks/[root of the server]__6ab716._.js");
+runtime.loadChunk("server/chunks/[root of the server]__4d3500._.css");
+module.exports = runtime.getOrInstantiateRuntimeModule("[project]/node_modules/next/dist/esm/build/templates/pages.js/(INNER_PAGE)/[project]/src/pages/user/topUp/index.tsx [ssr] (ecmascript) (ecmascript)", CHUNK_PUBLIC_PATH).exports;

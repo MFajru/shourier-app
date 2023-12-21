@@ -1,0 +1,3 @@
+{
+  "/admin/shipping/[shippingId]/[shippingDetailId]/edit": "pages/admin/shipping/[shippingId]/[shippingDetailId]/edit.js"
+}

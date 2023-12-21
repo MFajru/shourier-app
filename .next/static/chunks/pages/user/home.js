@@ -1,0 +1,11 @@
+__turbopack_load_page_chunks__("/user/home", [
+  "static/chunks/node_modules_next_dist_b2d6ff._.js",
+  "static/chunks/node_modules_react_36d920._.js",
+  "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+  "static/chunks/node_modules_react-dom_f14d04._.js",
+  "static/chunks/node_modules_851dd9._.js",
+  "static/chunks/[root of the server]__d03312._.js",
+  "static/chunks/node_modules_next_dist_pages_3cbcc2._.js",
+  "static/chunks/[next]_entry_page-loader_ts_a7bc59._.js",
+  "static/chunks/[next]_entry_page-loader_ts_2a58d6._.js"
+])

@@ -1,0 +1,12 @@
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/user/shipping": "pages/user/shipping.js",
+  "/api/getProvince": "pages/api/getProvince.js",
+  "/auth/login": "pages/auth/login.js",
+  "/auth/signup": "pages/auth/signup.js",
+  "/_error": "pages/_error.js",
+  "/user/profile": "pages/user/profile.js",
+  "/user/topUp": "pages/user/topUp.js",
+  "/user/address": "pages/user/address.js"
+}

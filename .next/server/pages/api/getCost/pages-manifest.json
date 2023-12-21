@@ -1,0 +1,3 @@
+{
+  "/api/getCost": "pages/api/getCost.js"
+}

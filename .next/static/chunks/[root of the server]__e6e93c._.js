@@ -1,0 +1,1492 @@
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push(["static/chunks/[root of the server]__e6e93c._.js", {
+
+"[project]/src/utils/generator/generateAddressDetailId.ts [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "generateAddressDetailId": ()=>generateAddressDetailId
+});
+const generateAddressDetailId = (userId, dataLength)=>{
+    const strNumber = parseInt(userId) * 100 + (dataLength + 1);
+    return strNumber;
+};
+
+})()),
+"[project]/src/utils/formValidation/isFieldEmpty.ts [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "isFieldEmpty": ()=>isFieldEmpty
+});
+const isFieldEmpty = (value)=>{
+    if (value === "") {
+        return true;
+    }
+    return false;
+};
+
+})()),
+"[project]/src/utils/formValidation/isValidForm.ts [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "isValidForm": ()=>isValidForm
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$formValidation$2f$isFieldEmpty$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/utils/formValidation/isFieldEmpty.ts [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+;
+const isValidForm = (data, setError)=>{
+    const ObjData = Object.entries(data);
+    let countEmpty = 0;
+    for (const [key, value] of ObjData){
+        if (__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$formValidation$2f$isFieldEmpty$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["isFieldEmpty"](value)) {
+            countEmpty += 1;
+            setError((prevData)=>{
+                return {
+                    ...prevData,
+                    [key]: true
+                };
+            });
+        }
+    }
+    if (countEmpty >= 1) {
+        return false;
+    }
+    return true;
+};
+
+})()),
+"[project]/src/utils/getErrorMessage.ts [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "default": ()=>__TURBOPACK__default__export__
+});
+const getErrorMessage = (error)=>{
+    if (error instanceof Error) return error.message;
+    return String(error);
+};
+const __TURBOPACK__default__export__ = getErrorMessage;
+
+})()),
+"[project]/src/config/index.ts [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "apiBaseUrl": ()=>apiBaseUrl
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/polyfills/process.js [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+const apiBaseUrl = ("TURBOPACK compile-time value", "http://localhost:8080");
+
+})()),
+"[project]/src/stores/userStore.ts [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "useUserStore": ()=>useUserStore
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/config/index.ts [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$getErrorMessage$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/utils/getErrorMessage.ts [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/axios/index.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/zustand/esm/index.mjs [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$middleware$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/zustand/esm/middleware.mjs [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+;
+;
+;
+;
+;
+const initialState = {
+    user: null,
+    error: "",
+    isLoading: false
+};
+const useUserStore = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["create"]()(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$middleware$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["persist"]((set)=>({
+        ...initialState,
+        user: null,
+        error: "",
+        isLoading: false,
+        getUser: async (userId)=>{
+            set({
+                isLoading: true
+            });
+            try {
+                const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"].get(`${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["apiBaseUrl"]}/users/${userId}`);
+                if (response.status != 200) {
+                    throw new Error(`Something bad happened, ${response.statusText}`);
+                }
+                const result = response.data;
+                set({
+                    user: {
+                        id: result.id,
+                        email: result.email,
+                        fname: result.fname,
+                        password: result.password,
+                        phoneNumber: result.phoneNumber,
+                        photo: result.photo,
+                        balance: result.balance,
+                        totalSpent: result.totalSpent,
+                        refCode: result.refCode
+                    }
+                });
+            } catch (error) {
+                set({
+                    error: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$getErrorMessage$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["default"](error)
+                });
+                console.error(error);
+            } finally{
+                set({
+                    isLoading: false
+                });
+            }
+        },
+        resetUserStore: ()=>set(initialState)
+    }), {
+    name: "userInfo",
+    skipHydration: true
+}));
+
+})()),
+"[project]/src/lib/swrFetcher.ts [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "fetcher": ()=>fetcher
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/axios/index.js [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+;
+const fetcher = async (url)=>{
+    const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"].get(url);
+    return response.data;
+};
+
+})()),
+"[project]/src/hooks/useCustomSWR.ts [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "useCustomSWR": ()=>useCustomSWR
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$swrFetcher$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/lib/swrFetcher.ts [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$swr$2f$core$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/swr/core/dist/index.mjs [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+var _s = __turbopack_refresh__.signature();
+;
+;
+const useCustomSWR = (apiUrl)=>{
+    _s();
+    const result = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$swr$2f$core$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"](apiUrl, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$swrFetcher$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["fetcher"], {
+        revalidateOnFocus: false
+    });
+    return result;
+};
+_s(useCustomSWR, "NOnZQl9n1uJkdTCHetkSuu6Wp+Y=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$swr$2f$core$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"]
+    ];
+});
+
+})()),
+"[project]/src/hooks/useProvinceOptions.ts [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "default": ()=>__TURBOPACK__default__export__
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/index.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useCustomSWR$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/hooks/useCustomSWR.ts [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+var _s = __turbopack_refresh__.signature();
+;
+;
+const useProvinceOptions = ()=>{
+    _s();
+    const [provinceOptions, setProvinceOptions] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"]([]);
+    const province = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useCustomSWR$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["useCustomSWR"]("/api/getProvince");
+    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"](()=>{
+        if (province.data) {
+            const provName = province.data.rajaongkir.results.map((value)=>value.province);
+            setProvinceOptions(provName);
+        }
+    }, [
+        province.data
+    ]);
+    return {
+        provinceOptions,
+        province
+    };
+};
+_s(useProvinceOptions, "AZdT3CFlYQat1sCAaqZJA9HPOGg=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useCustomSWR$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["useCustomSWR"]
+    ];
+});
+const __TURBOPACK__default__export__ = useProvinceOptions;
+
+})()),
+"[project]/src/hooks/useCityOptions.ts [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "default": ()=>__TURBOPACK__default__export__
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/index.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useCustomSWR$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/hooks/useCustomSWR.ts [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+var _s = __turbopack_refresh__.signature();
+;
+;
+const useCityOptions = (addressData)=>{
+    _s();
+    const [cityOptions, setCityOptions] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"]([]);
+    const city = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useCustomSWR$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["useCustomSWR"](addressData.provinceId != "" ? `/api/getCity?province=${addressData.provinceId}` : null);
+    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"](()=>{
+        if (city.data) {
+            const cityName = city.data.rajaongkir.results.map((value)=>value.city_name);
+            setCityOptions(cityName);
+        }
+    }, [
+        city.data
+    ]);
+    return {
+        cityOptions,
+        city
+    };
+};
+_s(useCityOptions, "B1govkl67l3kAECZbneBqwiGnT4=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useCustomSWR$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["useCustomSWR"]
+    ];
+});
+const __TURBOPACK__default__export__ = useCityOptions;
+
+})()),
+"[project]/src/components/Button/Button.tsx [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "Button": ()=>Button,
+    "default": ()=>__TURBOPACK__default__export__
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+;
+const Button = ({ type = "button", children, variants = "", textSize = "normal", ...props })=>{
+    let variantStyle = "";
+    switch(variants){
+        case "primary":
+            variantStyle = "text-white btn-primary";
+            break;
+        case "secondary":
+            variantStyle = "btn-outline btn-primary";
+            break;
+        case "secondaryBig":
+            variantStyle = "btn-outline btn-primary btn-lg";
+            break;
+        case "primaryBig":
+            variantStyle = "text-white btn-primary btn-lg";
+            break;
+        case "error":
+            variantStyle = "text-white btn-error";
+            break;
+        case "borderedError":
+            variantStyle = "text-white btn-outline btn-error";
+            break;
+        case "primarySmall":
+            variantStyle = "text-white btn-primary btn-sm";
+            break;
+        case "primaryBorderedTextSm":
+            variantStyle = "border border-primary border-solid text-primary text-sm drop-shadow-sm bg-white btn-sm";
+            break;
+        case "logout":
+            variantStyle = "text-red-500 text-base";
+            break;
+        case "bordered":
+            variantStyle = "border border-black text-black text-sm";
+            break;
+        case "borderedWarning":
+            variantStyle = "btn-outline btn-warning";
+            break;
+        case "active":
+            variantStyle = "text-white bg-primary";
+    }
+    switch(textSize){
+        case "medium":
+            variantStyle += " text-base";
+            break;
+    }
+    return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
+        type: type,
+        ...props,
+        className: `btn w-full ${variantStyle}`,
+        children: children
+    }, void 0, false, {
+        fileName: "<[project]/src/components/Button/Button.tsx>",
+        lineNumber: 75,
+        columnNumber: 5
+    }, this);
+};
+_c = Button;
+const __TURBOPACK__default__export__ = Button;
+var _c;
+__turbopack_refresh__.register(_c, "Button");
+
+})()),
+"[project]/src/components/Form/SelectField.tsx [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "default": ()=>__TURBOPACK__default__export__
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+;
+const SelectField = ({ id, name, placeholder = "Pick one...", label, value: defaultValue, err, variants, options, onChange, ...props })=>{
+    return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("label", {
+        className: "form-control w-full max-w-full",
+        children: [
+            /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                className: "label",
+                children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("span", {
+                    className: "label-text",
+                    children: label
+                }, void 0, false, {
+                    fileName: "<[project]/src/components/Form/SelectField.tsx>",
+                    lineNumber: 30,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "<[project]/src/components/Form/SelectField.tsx>",
+                lineNumber: 29,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("select", {
+                name: name,
+                id: id,
+                onChange: onChange,
+                value: defaultValue,
+                className: `select select-bordered ${variants === "small" ? "select-sm" : ""} ${err === "" ? "" : "border-red-500"}`,
+                ...props,
+                children: [
+                    /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("option", {
+                        disabled: true,
+                        value: "",
+                        children: placeholder
+                    }, void 0, false, {
+                        fileName: "<[project]/src/components/Form/SelectField.tsx>",
+                        lineNumber: 42,
+                        columnNumber: 9
+                    }, this),
+                    options.map((option, idx)=>/*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("option", {
+                            children: option
+                        }, idx, false, {
+                            fileName: "<[project]/src/components/Form/SelectField.tsx>",
+                            lineNumber: 46,
+                            columnNumber: 11
+                        }, this))
+                ]
+            }, void 0, true, {
+                fileName: "<[project]/src/components/Form/SelectField.tsx>",
+                lineNumber: 32,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                className: "label",
+                children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("span", {
+                    className: "label-text-alt text-red-500",
+                    children: err
+                }, void 0, false, {
+                    fileName: "<[project]/src/components/Form/SelectField.tsx>",
+                    lineNumber: 50,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "<[project]/src/components/Form/SelectField.tsx>",
+                lineNumber: 49,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "<[project]/src/components/Form/SelectField.tsx>",
+        lineNumber: 28,
+        columnNumber: 5
+    }, this);
+};
+_c = SelectField;
+const __TURBOPACK__default__export__ = SelectField;
+var _c;
+__turbopack_refresh__.register(_c, "SelectField");
+
+})()),
+"[project]/src/components/Form/InputField.tsx [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "InputField": ()=>InputField
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$20$2f$solid$2f$esm$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/@heroicons/react/20/solid/esm/index.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/index.js [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+;
+var _s = __turbopack_refresh__.signature();
+;
+;
+const InputField = ({ page, type, name, placeholder, value, label, onChange, err = "", disabled = false, variants = "medium", showEye = true, isPassword = false })=>{
+    _s();
+    const [showPassword, setShowPassword] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"](false);
+    const innerType = showPassword ? "text" : "password";
+    return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("label", {
+        className: "form-control w-full max-w-full relative",
+        children: [
+            /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                className: "label",
+                children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("span", {
+                    className: `label-text ${variants === "large" ? "text-base" : ""}`,
+                    children: label
+                }, void 0, false, {
+                    fileName: "<[project]/src/components/Form/InputField.tsx>",
+                    lineNumber: 39,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "<[project]/src/components/Form/InputField.tsx>",
+                lineNumber: 38,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("input", {
+                type: isPassword && disabled ? "password" : type === "password" ? innerType : type,
+                name: name,
+                placeholder: placeholder,
+                className: `text-black input input-bordered w-full max-w-full ${variants === "medium" ? "input-md" : variants === "large" ? "input-lg" : "input-sm"} ${err != "" ? "input-error" : ""} ${disabled ? "!text-black !bg-gray-100" : ""}`,
+                onChange: onChange,
+                value: value,
+                disabled: disabled
+            }, void 0, false, {
+                fileName: "<[project]/src/components/Form/InputField.tsx>",
+                lineNumber: 45,
+                columnNumber: 7
+            }, this),
+            showEye && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("button", {
+                type: "button",
+                className: `absolute w-5 h-5 right-4 top-[50px] ${type !== "password" ? "hidden" : ""}`,
+                onClick: ()=>{
+                    setShowPassword(!showPassword);
+                },
+                children: showPassword ? /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$20$2f$solid$2f$esm$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["EyeIcon"], {
+                    className: "text-gray-500"
+                }, void 0, false, {
+                    fileName: "<[project]/src/components/Form/InputField.tsx>",
+                    lineNumber: 79,
+                    columnNumber: 13
+                }, this) : /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroicons$2f$react$2f$20$2f$solid$2f$esm$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["EyeSlashIcon"], {
+                    className: "text-gray-500"
+                }, void 0, false, {
+                    fileName: "<[project]/src/components/Form/InputField.tsx>",
+                    lineNumber: 81,
+                    columnNumber: 13
+                }, this)
+            }, void 0, false, {
+                fileName: "<[project]/src/components/Form/InputField.tsx>",
+                lineNumber: 69,
+                columnNumber: 9
+            }, this),
+            page === "promo" && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                className: "label absolute -bottom-7",
+                children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("span", {
+                    className: "label-text-alt text-red-500",
+                    children: err
+                }, void 0, false, {
+                    fileName: "<[project]/src/components/Form/InputField.tsx>",
+                    lineNumber: 88,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "<[project]/src/components/Form/InputField.tsx>",
+                lineNumber: 87,
+                columnNumber: 9
+            }, this),
+            page != "promo" && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                className: "label",
+                children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("span", {
+                    className: "label-text-alt text-red-500",
+                    children: err
+                }, void 0, false, {
+                    fileName: "<[project]/src/components/Form/InputField.tsx>",
+                    lineNumber: 93,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "<[project]/src/components/Form/InputField.tsx>",
+                lineNumber: 92,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "<[project]/src/components/Form/InputField.tsx>",
+        lineNumber: 37,
+        columnNumber: 5
+    }, this);
+};
+_s(InputField, "daguiRHWMFkqPgCh/ppD7CF5VuQ=");
+_c = InputField;
+var _c;
+__turbopack_refresh__.register(_c, "InputField");
+
+})()),
+"[project]/src/components/Form/AddressForm.tsx [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "default": ()=>__TURBOPACK__default__export__
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Form$2f$InputField$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/Form/InputField.tsx [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Form$2f$SelectField$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/Form/SelectField.tsx [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Button$2f$Button$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/Button/Button.tsx [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+;
+;
+;
+;
+const AddressForm = ({ addressData, handleOnChange, isFormError, provinceOptions, cityOptions, variants = "origin", router })=>{
+    return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: [
+            /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Form$2f$InputField$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["InputField"], {
+                type: "text",
+                name: "addressName",
+                value: addressData.addressName,
+                onChange: handleOnChange,
+                label: "Address Name",
+                placeholder: "ex: JNE Kuningan, Rumah Nenek",
+                err: isFormError.addressName ? "Address must be filled" : ""
+            }, void 0, false, {
+                fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                lineNumber: 32,
+                columnNumber: 7
+            }, this),
+            variants === "destination" && /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                className: "flex flex-col md:flex-row md:gap-4",
+                children: [
+                    /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Form$2f$InputField$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["InputField"], {
+                        type: "text",
+                        name: "receiver",
+                        value: addressData.receiver,
+                        onChange: handleOnChange,
+                        label: "Receiver Name",
+                        placeholder: "ex: Jojo",
+                        err: isFormError.receiver ? "Receiver name must be filled" : ""
+                    }, void 0, false, {
+                        fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                        lineNumber: 43,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Form$2f$InputField$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["InputField"], {
+                        type: "number",
+                        name: "receiverPhone",
+                        value: addressData.receiverPhone,
+                        onChange: handleOnChange,
+                        label: "Receiver Phone Number",
+                        placeholder: "ex: 081234567890",
+                        err: isFormError.receiverPhone ? "Receiver phone number must be filled" : ""
+                    }, void 0, false, {
+                        fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                        lineNumber: 52,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                lineNumber: 42,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Form$2f$InputField$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["InputField"], {
+                type: "text",
+                name: "street",
+                value: addressData.street,
+                onChange: handleOnChange,
+                label: "Street",
+                placeholder: "ex: Jl. Ini nama Jalan No. 20, Kuningan, Setiabudi",
+                err: isFormError.street ? "Street must be filled" : ""
+            }, void 0, false, {
+                fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                lineNumber: 67,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                className: "flex flex-col md:flex-row md:gap-4",
+                children: [
+                    /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Form$2f$SelectField$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                        id: "province",
+                        name: "province",
+                        onChange: handleOnChange,
+                        options: provinceOptions,
+                        label: "Province",
+                        value: addressData.province ? addressData.province : "",
+                        err: isFormError.province ? "Province must be chosen" : ""
+                    }, void 0, false, {
+                        fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                        lineNumber: 77,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Form$2f$SelectField$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                        id: "city",
+                        name: "city",
+                        onChange: handleOnChange,
+                        options: cityOptions,
+                        label: "City",
+                        value: addressData.city ? addressData.city : "",
+                        disabled: addressData.provinceId ? false : true,
+                        err: isFormError.city ? "City must be chosen" : ""
+                    }, void 0, false, {
+                        fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                        lineNumber: 86,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                lineNumber: 76,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                className: "mt-10 flex gap-4",
+                children: [
+                    /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                        className: "w-40",
+                        children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Button$2f$Button$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                            type: "submit",
+                            variants: "primary",
+                            children: "Save"
+                        }, void 0, false, {
+                            fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                            lineNumber: 99,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                        lineNumber: 98,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                        className: "",
+                        children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Button$2f$Button$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                            type: "button",
+                            variants: "borderedError",
+                            onClick: ()=>router?.back(),
+                            children: "Cancel"
+                        }, void 0, false, {
+                            fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                            lineNumber: 104,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                        lineNumber: 103,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "<[project]/src/components/Form/AddressForm.tsx>",
+                lineNumber: 97,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true);
+};
+_c = AddressForm;
+const __TURBOPACK__default__export__ = AddressForm;
+var _c;
+__turbopack_refresh__.register(_c, "AddressForm");
+
+})()),
+"[project]/src/pages/user/address/newAddress.tsx [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+__turbopack_esm__({
+    "default": ()=>__TURBOPACK__default__export__
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Form$2f$AddressForm$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/Form/AddressForm.tsx [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/config/index.ts [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useCityOptions$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/hooks/useCityOptions.ts [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useCustomSWR$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/hooks/useCustomSWR.ts [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useProvinceOptions$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/hooks/useProvinceOptions.ts [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$stores$2f$userStore$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/stores/userStore.ts [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/axios/index.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/router.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/react/index.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/sonner/dist/index.mjs [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/js-cookie/dist/js.cookie.mjs [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$formValidation$2f$isValidForm$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/utils/formValidation/isValidForm.ts [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$generator$2f$generateAddressDetailId$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/utils/generator/generateAddressDetailId.ts [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+;
+var _s = __turbopack_refresh__.signature();
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+const NewAddress = ()=>{
+    _s();
+    const userId = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$js$2d$cookie$2f$dist$2f$js$2e$cookie$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["default"].get("userId");
+    const router = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"]();
+    const [destAddressForm, setDestAddressForm] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"]({
+        addressName: "",
+        receiver: "",
+        receiverPhone: "",
+        city: "",
+        cityId: "",
+        province: "",
+        provinceId: "",
+        street: "",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+    });
+    const [isFormError, setIsFormError] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"]({
+        addressName: false,
+        receiver: false,
+        receiverPhone: false,
+        street: false,
+        province: false,
+        city: false
+    });
+    const { provinceOptions, province } = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useProvinceOptions$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["default"]();
+    const { cityOptions, city } = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useCityOptions$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["default"](destAddressForm);
+    const existingAddress = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useCustomSWR$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["useCustomSWR"](userId ? `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["apiBaseUrl"]}/destinationAddress/${parseInt(userId) - 1}` : null);
+    const patchDestinationAddress = async (newArrAddress)=>{
+        try {
+            if (userId) {
+                const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"].patch(`${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["apiBaseUrl"]}/destinationAddress/${parseInt(userId) - 1}`, {
+                    address: newArrAddress
+                });
+                if (response.status != 200) {
+                    throw new Error(`Something bad happened, ${response.statusText}`);
+                }
+                __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["toast"].success("Add successfull");
+                return response.data;
+            }
+        } catch (error) {
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["toast"].error("Failed to add data, server error");
+            console.error(error);
+        }
+    };
+    const handleSubmitAddress = async (e)=>{
+        e.preventDefault();
+        if (__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$formValidation$2f$isValidForm$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["isValidForm"](destAddressForm, setIsFormError)) {
+            if (existingAddress.data && userId) {
+                const newAddress = existingAddress.data.address;
+                newAddress.push({
+                    ...destAddressForm,
+                    id: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$generator$2f$generateAddressDetailId$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["generateAddressDetailId"](userId, existingAddress.data.address.length)
+                });
+                const res = await patchDestinationAddress(newAddress);
+                setTimeout(()=>{
+                    router.back();
+                }, 1000);
+            }
+        }
+    };
+    const handleOnChange = (e)=>{
+        if (e.target.name === "province") {
+            if (province.data) {
+                const selectProvince = province.data.rajaongkir.results.find((value)=>{
+                    return value.province === e.target.value;
+                });
+                if (selectProvince) {
+                    setDestAddressForm((prevData)=>{
+                        return {
+                            ...prevData,
+                            [e.target.name]: selectProvince.province,
+                            provinceId: selectProvince.province_id
+                        };
+                    });
+                }
+            }
+        } else if (e.target.name === "city") {
+            if (city.data && city.data.rajaongkir.results.length != 0) {
+                const selectCity = city.data.rajaongkir.results.find((value)=>{
+                    return value.city_name === e.target.value;
+                });
+                if (selectCity) {
+                    setDestAddressForm((prevData)=>{
+                        return {
+                            ...prevData,
+                            [e.target.name]: selectCity.city_name,
+                            cityId: selectCity.city_id
+                        };
+                    });
+                }
+            }
+        } else {
+            setDestAddressForm((prevData)=>{
+                return {
+                    ...prevData,
+                    [e.target.name]: e.target.value
+                };
+            });
+        }
+        setIsFormError((prevData)=>{
+            return {
+                ...prevData,
+                [e.target.name]: false
+            };
+        });
+    };
+    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"](()=>{
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$stores$2f$userStore$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["useUserStore"].persist.rehydrate();
+    }, []);
+    return /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+        className: "flex flex-col",
+        children: [
+            /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["Toaster"], {
+                position: "top-center",
+                richColors: true
+            }, void 0, false, {
+                fileName: "<[project]/src/pages/user/address/newAddress.tsx>",
+                lineNumber: 149,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                className: "bg-primary w-full py-12 px-[5%] lg:px-[12%]",
+                children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("h1", {
+                    className: "text-3xl font-semibold text-white",
+                    children: "Add New Address"
+                }, void 0, false, {
+                    fileName: "<[project]/src/pages/user/address/newAddress.tsx>",
+                    lineNumber: 151,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "<[project]/src/pages/user/address/newAddress.tsx>",
+                lineNumber: 150,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("div", {
+                className: "py-10 flex flex-col gap-8 px-[5%] lg:px-[12%]",
+                children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"]("form", {
+                    className: "flex flex-col gap-4",
+                    onSubmit: handleSubmitAddress,
+                    children: /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"](__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Form$2f$AddressForm$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                        variants: "destination",
+                        addressData: destAddressForm,
+                        isFormError: isFormError,
+                        handleOnChange: handleOnChange,
+                        provinceOptions: provinceOptions,
+                        cityOptions: cityOptions,
+                        router: router
+                    }, void 0, false, {
+                        fileName: "<[project]/src/pages/user/address/newAddress.tsx>",
+                        lineNumber: 155,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "<[project]/src/pages/user/address/newAddress.tsx>",
+                    lineNumber: 154,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "<[project]/src/pages/user/address/newAddress.tsx>",
+                lineNumber: 153,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "<[project]/src/pages/user/address/newAddress.tsx>",
+        lineNumber: 148,
+        columnNumber: 5
+    }, this);
+};
+_s(NewAddress, "TUA9VK7aoSUZY+GR/olHZqgZHyo=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useProvinceOptions$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["default"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useCityOptions$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["default"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useCustomSWR$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["useCustomSWR"]
+    ];
+});
+_c = NewAddress;
+const __TURBOPACK__default__export__ = NewAddress;
+var _c;
+__turbopack_refresh__.register(_c, "NewAddress");
+
+})()),
+"[next]/entry/page-loader.ts/(PAGE)/[project]/src/pages/user/address/newAddress.tsx [client] (ecmascript) (ecmascript)": (function({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__, m: module, e: exports, t: require }) { !function() {
+
+const PAGE_PATH = "/user/address/newAddress";
+(window.__NEXT_P = window.__NEXT_P || []).push([
+    PAGE_PATH,
+    ()=>{
+        return __turbopack_require__("[project]/src/pages/user/address/newAddress.tsx [client] (ecmascript)");
+    }
+]);
+if (module.hot) {
+    module.hot.dispose(function() {
+        window.__NEXT_P.push([
+            PAGE_PATH
+        ]);
+    });
+}
+
+}.call(this) }),
+"[turbopack]/dev/client/websocket.ts [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+// Adapted from https://github.com/vercel/next.js/blob/canary/packages/next/client/dev/error-overlay/websocket.ts
+__turbopack_esm__({
+    "addMessageListener": ()=>addMessageListener,
+    "connectHMR": ()=>connectHMR,
+    "sendMessage": ()=>sendMessage
+});
+let source;
+const eventCallbacks = [];
+// TODO: add timeout again
+// let lastActivity = Date.now()
+function getSocketProtocol(assetPrefix) {
+    let protocol = location.protocol;
+    try {
+        // assetPrefix is a url
+        protocol = new URL(assetPrefix).protocol;
+    } catch (_) {}
+    return protocol === "http:" ? "ws" : "wss";
+}
+function addMessageListener(cb) {
+    eventCallbacks.push(cb);
+}
+function sendMessage(data) {
+    if (!source || source.readyState !== source.OPEN) return;
+    return source.send(data);
+}
+function connectHMR(options) {
+    const { timeout = 5 * 1000 } = options;
+    function init() {
+        if (source) source.close();
+        console.log("[HMR] connecting...");
+        function handleOnline() {
+            const connected = {
+                type: "turbopack-connected"
+            };
+            eventCallbacks.forEach((cb)=>{
+                cb(connected);
+            });
+            if (options.log) console.log("[HMR] connected");
+        // lastActivity = Date.now()
+        }
+        function handleMessage(event) {
+            // lastActivity = Date.now()
+            const message = {
+                type: "turbopack-message",
+                data: JSON.parse(event.data)
+            };
+            eventCallbacks.forEach((cb)=>{
+                cb(message);
+            });
+        }
+        // let timer: NodeJS.Timeout
+        function handleDisconnect() {
+            source.close();
+            setTimeout(init, timeout);
+        }
+        const { hostname, port } = location;
+        const protocol = getSocketProtocol(options.assetPrefix || "");
+        const assetPrefix = options.assetPrefix.replace(/^\/+/, "");
+        let url = `${protocol}://${hostname}:${port}${assetPrefix ? `/${assetPrefix}` : ""}`;
+        if (assetPrefix.startsWith("http")) {
+            url = `${protocol}://${assetPrefix.split("://")[1]}`;
+        }
+        source = new window.WebSocket(`${url}${options.path}`);
+        source.onopen = handleOnline;
+        source.onerror = handleDisconnect;
+        source.onmessage = handleMessage;
+    }
+    init();
+}
+
+})()),
+"[turbopack]/dev/client/hmr-client.ts [client] (ecmascript)": (({ r: __turbopack_require__, f: __turbopack_require_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, l: __turbopack_load__, j: __turbopack_dynamic__, p: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, g: global, __dirname, k: __turbopack_refresh__ }) => (() => {
+"use strict";
+
+/// <reference path="../../shared/runtime-types.d.ts" />
+/// <reference path="../runtime/base/globals.d.ts" />
+/// <reference path="../runtime/base/protocol.d.ts" />
+/// <reference path="../runtime/base/extensions.d.ts" />
+__turbopack_esm__({
+    "connect": ()=>connect,
+    "setHooks": ()=>setHooks,
+    "subscribeToUpdate": ()=>subscribeToUpdate
+});
+var __TURBOPACK__imported__module__$5b$turbopack$5d2f$dev$2f$client$2f$websocket$2e$ts__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[turbopack]/dev/client/websocket.ts [client] (ecmascript)");
+"__TURBOPACK__ecmascript__hoisting__location__";
+;
+function connect({ // TODO(WEB-1465) Remove this backwards compat fallback once
+// vercel/next.js#54586 is merged.
+addMessageListener = __TURBOPACK__imported__module__$5b$turbopack$5d2f$dev$2f$client$2f$websocket$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["addMessageListener"], // TODO(WEB-1465) Remove this backwards compat fallback once
+// vercel/next.js#54586 is merged.
+sendMessage = __TURBOPACK__imported__module__$5b$turbopack$5d2f$dev$2f$client$2f$websocket$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["sendMessage"] }) {
+    addMessageListener((msg)=>{
+        switch(msg.type){
+            case "turbopack-connected":
+                handleSocketConnected(sendMessage);
+                break;
+            default:
+                if (Array.isArray(msg.data)) {
+                    for(let i = 0; i < msg.data.length; i++){
+                        handleSocketMessage(msg.data[i]);
+                    }
+                } else {
+                    handleSocketMessage(msg.data);
+                }
+                applyAggregatedUpdates();
+                break;
+        }
+    });
+    const queued = globalThis.TURBOPACK_CHUNK_UPDATE_LISTENERS;
+    if (queued != null && !Array.isArray(queued)) {
+        throw new Error("A separate HMR handler was already registered");
+    }
+    globalThis.TURBOPACK_CHUNK_UPDATE_LISTENERS = {
+        push: ([chunkPath, callback])=>{
+            subscribeToChunkUpdate(chunkPath, sendMessage, callback);
+        }
+    };
+    if (Array.isArray(queued)) {
+        for (const [chunkPath, callback] of queued){
+            subscribeToChunkUpdate(chunkPath, sendMessage, callback);
+        }
+    }
+}
+const updateCallbackSets = new Map();
+function sendJSON(sendMessage, message) {
+    sendMessage(JSON.stringify(message));
+}
+function resourceKey(resource) {
+    return JSON.stringify({
+        path: resource.path,
+        headers: resource.headers || null
+    });
+}
+function subscribeToUpdates(sendMessage, resource) {
+    sendJSON(sendMessage, {
+        type: "turbopack-subscribe",
+        ...resource
+    });
+    return ()=>{
+        sendJSON(sendMessage, {
+            type: "turbopack-unsubscribe",
+            ...resource
+        });
+    };
+}
+function handleSocketConnected(sendMessage) {
+    for (const key of updateCallbackSets.keys()){
+        subscribeToUpdates(sendMessage, JSON.parse(key));
+    }
+}
+// we aggregate all pending updates until the issues are resolved
+const chunkListsWithPendingUpdates = new Map();
+function aggregateUpdates(msg) {
+    const key = resourceKey(msg.resource);
+    let aggregated = chunkListsWithPendingUpdates.get(key);
+    if (aggregated) {
+        aggregated.instruction = mergeChunkListUpdates(aggregated.instruction, msg.instruction);
+    } else {
+        chunkListsWithPendingUpdates.set(key, msg);
+    }
+}
+function applyAggregatedUpdates() {
+    if (chunkListsWithPendingUpdates.size === 0) return;
+    hooks.beforeRefresh();
+    for (const msg of chunkListsWithPendingUpdates.values()){
+        triggerUpdate(msg);
+    }
+    chunkListsWithPendingUpdates.clear();
+    finalizeUpdate();
+}
+function mergeChunkListUpdates(updateA, updateB) {
+    let chunks;
+    if (updateA.chunks != null) {
+        if (updateB.chunks == null) {
+            chunks = updateA.chunks;
+        } else {
+            chunks = mergeChunkListChunks(updateA.chunks, updateB.chunks);
+        }
+    } else if (updateB.chunks != null) {
+        chunks = updateB.chunks;
+    }
+    let merged;
+    if (updateA.merged != null) {
+        if (updateB.merged == null) {
+            merged = updateA.merged;
+        } else {
+            // Since `merged` is an array of updates, we need to merge them all into
+            // one, consistent update.
+            // Since there can only be `EcmascriptMergeUpdates` in the array, there is
+            // no need to key on the `type` field.
+            let update = updateA.merged[0];
+            for(let i = 1; i < updateA.merged.length; i++){
+                update = mergeChunkListEcmascriptMergedUpdates(update, updateA.merged[i]);
+            }
+            for(let i = 0; i < updateB.merged.length; i++){
+                update = mergeChunkListEcmascriptMergedUpdates(update, updateB.merged[i]);
+            }
+            merged = [
+                update
+            ];
+        }
+    } else if (updateB.merged != null) {
+        merged = updateB.merged;
+    }
+    return {
+        type: "ChunkListUpdate",
+        chunks,
+        merged
+    };
+}
+function mergeChunkListChunks(chunksA, chunksB) {
+    const chunks = {};
+    for (const [chunkPath, chunkUpdateA] of Object.entries(chunksA)){
+        const chunkUpdateB = chunksB[chunkPath];
+        if (chunkUpdateB != null) {
+            const mergedUpdate = mergeChunkUpdates(chunkUpdateA, chunkUpdateB);
+            if (mergedUpdate != null) {
+                chunks[chunkPath] = mergedUpdate;
+            }
+        } else {
+            chunks[chunkPath] = chunkUpdateA;
+        }
+    }
+    for (const [chunkPath, chunkUpdateB] of Object.entries(chunksB)){
+        if (chunks[chunkPath] == null) {
+            chunks[chunkPath] = chunkUpdateB;
+        }
+    }
+    return chunks;
+}
+function mergeChunkUpdates(updateA, updateB) {
+    if (updateA.type === "added" && updateB.type === "deleted" || updateA.type === "deleted" && updateB.type === "added") {
+        return undefined;
+    }
+    if (updateA.type === "partial") {
+        invariant(updateA.instruction, "Partial updates are unsupported");
+    }
+    if (updateB.type === "partial") {
+        invariant(updateB.instruction, "Partial updates are unsupported");
+    }
+    return undefined;
+}
+function mergeChunkListEcmascriptMergedUpdates(mergedA, mergedB) {
+    const entries = mergeEcmascriptChunkEntries(mergedA.entries, mergedB.entries);
+    const chunks = mergeEcmascriptChunksUpdates(mergedA.chunks, mergedB.chunks);
+    return {
+        type: "EcmascriptMergedUpdate",
+        entries,
+        chunks
+    };
+}
+function mergeEcmascriptChunkEntries(entriesA, entriesB) {
+    return {
+        ...entriesA,
+        ...entriesB
+    };
+}
+function mergeEcmascriptChunksUpdates(chunksA, chunksB) {
+    if (chunksA == null) {
+        return chunksB;
+    }
+    if (chunksB == null) {
+        return chunksA;
+    }
+    const chunks = {};
+    for (const [chunkPath, chunkUpdateA] of Object.entries(chunksA)){
+        const chunkUpdateB = chunksB[chunkPath];
+        if (chunkUpdateB != null) {
+            const mergedUpdate = mergeEcmascriptChunkUpdates(chunkUpdateA, chunkUpdateB);
+            if (mergedUpdate != null) {
+                chunks[chunkPath] = mergedUpdate;
+            }
+        } else {
+            chunks[chunkPath] = chunkUpdateA;
+        }
+    }
+    for (const [chunkPath, chunkUpdateB] of Object.entries(chunksB)){
+        if (chunks[chunkPath] == null) {
+            chunks[chunkPath] = chunkUpdateB;
+        }
+    }
+    if (Object.keys(chunks).length === 0) {
+        return undefined;
+    }
+    return chunks;
+}
+function mergeEcmascriptChunkUpdates(updateA, updateB) {
+    if (updateA.type === "added" && updateB.type === "deleted") {
+        // These two completely cancel each other out.
+        return undefined;
+    }
+    if (updateA.type === "deleted" && updateB.type === "added") {
+        const added = [];
+        const deleted = [];
+        const deletedModules = new Set(updateA.modules ?? []);
+        const addedModules = new Set(updateB.modules ?? []);
+        for (const moduleId of addedModules){
+            if (!deletedModules.has(moduleId)) {
+                added.push(moduleId);
+            }
+        }
+        for (const moduleId of deletedModules){
+            if (!addedModules.has(moduleId)) {
+                deleted.push(moduleId);
+            }
+        }
+        if (added.length === 0 && deleted.length === 0) {
+            return undefined;
+        }
+        return {
+            type: "partial",
+            added,
+            deleted
+        };
+    }
+    if (updateA.type === "partial" && updateB.type === "partial") {
+        const added = new Set([
+            ...updateA.added ?? [],
+            ...updateB.added ?? []
+        ]);
+        const deleted = new Set([
+            ...updateA.deleted ?? [],
+            ...updateB.deleted ?? []
+        ]);
+        if (updateB.added != null) {
+            for (const moduleId of updateB.added){
+                deleted.delete(moduleId);
+            }
+        }
+        if (updateB.deleted != null) {
+            for (const moduleId of updateB.deleted){
+                added.delete(moduleId);
+            }
+        }
+        return {
+            type: "partial",
+            added: [
+                ...added
+            ],
+            deleted: [
+                ...deleted
+            ]
+        };
+    }
+    if (updateA.type === "added" && updateB.type === "partial") {
+        const modules = new Set([
+            ...updateA.modules ?? [],
+            ...updateB.added ?? []
+        ]);
+        for (const moduleId of updateB.deleted ?? []){
+            modules.delete(moduleId);
+        }
+        return {
+            type: "added",
+            modules: [
+                ...modules
+            ]
+        };
+    }
+    if (updateA.type === "partial" && updateB.type === "deleted") {
+        // We could eagerly return `updateB` here, but this would potentially be
+        // incorrect if `updateA` has added modules.
+        const modules = new Set(updateB.modules ?? []);
+        if (updateA.added != null) {
+            for (const moduleId of updateA.added){
+                modules.delete(moduleId);
+            }
+        }
+        return {
+            type: "deleted",
+            modules: [
+                ...modules
+            ]
+        };
+    }
+    // Any other update combination is invalid.
+    return undefined;
+}
+function invariant(never, message) {
+    throw new Error(`Invariant: ${message}`);
+}
+const CRITICAL = [
+    "bug",
+    "error",
+    "fatal"
+];
+function compareByList(list, a, b) {
+    const aI = list.indexOf(a) + 1 || list.length;
+    const bI = list.indexOf(b) + 1 || list.length;
+    return aI - bI;
+}
+const chunksWithIssues = new Map();
+function emitIssues() {
+    const issues = [];
+    const deduplicationSet = new Set();
+    for (const [_, chunkIssues] of chunksWithIssues){
+        for (const chunkIssue of chunkIssues){
+            if (deduplicationSet.has(chunkIssue.formatted)) continue;
+            issues.push(chunkIssue);
+            deduplicationSet.add(chunkIssue.formatted);
+        }
+    }
+    sortIssues(issues);
+    hooks.issues(issues);
+}
+function handleIssues(msg) {
+    const key = resourceKey(msg.resource);
+    let hasCriticalIssues = false;
+    for (const issue of msg.issues){
+        if (CRITICAL.includes(issue.severity)) {
+            hasCriticalIssues = true;
+        }
+    }
+    if (msg.issues.length > 0) {
+        chunksWithIssues.set(key, msg.issues);
+    } else if (chunksWithIssues.has(key)) {
+        chunksWithIssues.delete(key);
+    }
+    emitIssues();
+    return hasCriticalIssues;
+}
+const SEVERITY_ORDER = [
+    "bug",
+    "fatal",
+    "error",
+    "warning",
+    "info",
+    "log"
+];
+const CATEGORY_ORDER = [
+    "parse",
+    "resolve",
+    "code generation",
+    "rendering",
+    "typescript",
+    "other"
+];
+function sortIssues(issues) {
+    issues.sort((a, b)=>{
+        const first = compareByList(SEVERITY_ORDER, a.severity, b.severity);
+        if (first !== 0) return first;
+        return compareByList(CATEGORY_ORDER, a.category, b.category);
+    });
+}
+const hooks = {
+    beforeRefresh: ()=>{},
+    refresh: ()=>{},
+    buildOk: ()=>{},
+    issues: (issues)=>{}
+};
+function setHooks(newHooks) {
+    Object.assign(hooks, newHooks);
+}
+function handleSocketMessage(msg) {
+    sortIssues(msg.issues);
+    handleIssues(msg);
+    switch(msg.type){
+        case "issues":
+            break;
+        case "partial":
+            // aggregate updates
+            aggregateUpdates(msg);
+            break;
+        default:
+            // run single update
+            const runHooks = chunkListsWithPendingUpdates.size === 0;
+            if (runHooks) hooks.beforeRefresh();
+            triggerUpdate(msg);
+            if (runHooks) finalizeUpdate();
+            break;
+    }
+}
+function finalizeUpdate() {
+    hooks.refresh();
+    hooks.buildOk();
+    // This is used by the Next.js integration test suite to notify it when HMR
+    // updates have been completed.
+    // TODO: Only run this in test environments (gate by `process.env.__NEXT_TEST_MODE`)
+    if (globalThis.__NEXT_HMR_CB) {
+        globalThis.__NEXT_HMR_CB();
+        globalThis.__NEXT_HMR_CB = null;
+    }
+}
+function subscribeToChunkUpdate(chunkPath, sendMessage, callback) {
+    return subscribeToUpdate({
+        path: chunkPath
+    }, sendMessage, callback);
+}
+function subscribeToUpdate(resource, sendMessage, callback) {
+    // TODO(WEB-1465) Remove this backwards compat fallback once
+    // vercel/next.js#54586 is merged.
+    if (callback === undefined) {
+        callback = sendMessage;
+        sendMessage = __TURBOPACK__imported__module__$5b$turbopack$5d2f$dev$2f$client$2f$websocket$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["sendMessage"];
+    }
+    const key = resourceKey(resource);
+    let callbackSet;
+    const existingCallbackSet = updateCallbackSets.get(key);
+    if (!existingCallbackSet) {
+        callbackSet = {
+            callbacks: new Set([
+                callback
+            ]),
+            unsubscribe: subscribeToUpdates(sendMessage, resource)
+        };
+        updateCallbackSets.set(key, callbackSet);
+    } else {
+        existingCallbackSet.callbacks.add(callback);
+        callbackSet = existingCallbackSet;
+    }
+    return ()=>{
+        callbackSet.callbacks.delete(callback);
+        if (callbackSet.callbacks.size === 0) {
+            callbackSet.unsubscribe();
+            updateCallbackSets.delete(key);
+        }
+    };
+}
+function triggerUpdate(msg) {
+    const key = resourceKey(msg.resource);
+    const callbackSet = updateCallbackSets.get(key);
+    if (!callbackSet) {
+        return;
+    }
+    try {
+        for (const callback of callbackSet.callbacks){
+            callback(msg);
+        }
+        if (msg.type === "notFound") {
+            // This indicates that the resource which we subscribed to either does not exist or
+            // has been deleted. In either case, we should clear all update callbacks, so if a
+            // new subscription is created for the same resource, it will send a new "subscribe"
+            // message to the server.
+            // No need to send an "unsubscribe" message to the server, it will have already
+            // dropped the update stream before sending the "notFound" message.
+            updateCallbackSets.delete(key);
+        }
+    } catch (err) {
+        console.error(`An error occurred during the update of resource \`${msg.resource.path}\``, err);
+        location.reload();
+    }
+}
+
+})()),
+}]);
+
+//# sourceMappingURL=[root of the server]__e6e93c._.js.map
