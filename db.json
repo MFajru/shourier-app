@@ -1,0 +1,242 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "role": "admin",
+      "token": "admin-ajkdklajldkjaf",
+      "email": "admin@mail.com",
+      "password": "password",
+      "fname": "admin",
+      "phoneNumber": "08112313",
+      "photo": "https://res.cloudinary.com/dgvshxgo4/image/upload/v1703129589/yjnes99iozwqcx6emq1n.jpg",
+      "createdAt": "2023-12-04T08:35:32.000Z",
+      "updatedAt": "2023-12-04T08:35:32.000Z"
+    },
+    {
+      "id": 2,
+      "role": "user",
+      "token": "user-abasdjkas",
+      "email": "user@mail.com",
+      "password": "password",
+      "fname": "Main user",
+      "phoneNumber": "081234347892",
+      "photo": "https://res.cloudinary.com/dgvshxgo4/image/upload/v1703156224/xrc2zvubr1bmxi94ulvu.svg",
+      "balance": 344200,
+      "refCode": "INIREF",
+      "refCodeFriend": "REFCODE",
+      "refCodeUsedCount": 0,
+      "completedShipments": 1,
+      "totalSpent": 1155000,
+      "createdAt": "2023-12-04T08:35:32.000Z",
+      "updatedAt": "2023-12-04T08:35:32.000Z"
+    },
+    {
+      "role": "user",
+      "token": "user-ef0a82ba-9489-4671-b248-022465e47dbe",
+      "email": "evan@mail.com",
+      "password": "password",
+      "fname": "evan hrlan",
+      "phoneNumber": "081231332431",
+      "photo": "https://res.cloudinary.com/dgvshxgo4/image/upload/v1703218646/xyr8xitgne2nndxb16if.png",
+      "balance": 300000,
+      "refCode": "LRL94K",
+      "refCodeFriend": "INIREF",
+      "refCodeUsedCount": 0,
+      "completedShipments": 0,
+      "totalSpent": 0,
+      "createdAt": "2023-12-22T04:14:59.150Z",
+      "updatedAt": "2023-12-22T04:14:59.150Z",
+      "id": 3
+    }
+  ],
+  "promos": [
+    {
+      "promoCode": "CONTOHPROMO",
+      "discount": 15,
+      "quota": 10,
+      "used": 0,
+      "expiryDate": "2023-12-29T17:00:00.000Z",
+      "createdAt": "2023-12-22T04:36:07.476Z",
+      "updatedAt": "2023-12-22T04:36:07.476Z",
+      "id": 2
+    }
+  ],
+  "destinationAddress": [
+    {
+      "id": 1,
+      "userId": 2,
+      "address": [
+        {
+          "id": 202,
+          "addressName": "Rumah Dodo",
+          "city": "Manokwari Selatan",
+          "cityId": "273",
+          "province": "Papua Barat",
+          "provinceId": "25",
+          "street": "Jl. Ini Nama Jalan Bandung",
+          "receiver": "Dodo",
+          "receiverPhone": "08123131355",
+          "createdAt": "2023-12-04T08:35:32.000Z",
+          "updatedAt": "2023-12-04T08:35:32.000Z"
+        },
+        {
+          "id": 203,
+          "addressName": "Rumah Bapak Wasik",
+          "receiver": "Xoxo",
+          "receiverPhone": "081234567890",
+          "city": "Bandar Lampung",
+          "cityId": "21",
+          "province": "Lampung",
+          "provinceId": "18",
+          "street": "Jl. Ikan Hiu No.20, Teluk Betung Selatan, Teluk Betung",
+          "createdAt": "2023-12-20T13:37:18.203Z",
+          "updatedAt": "2023-12-20T13:37:18.203Z"
+        },
+        {
+          "id": 204,
+          "addressName": "Rumah Xiandi",
+          "receiver": "Xiandi",
+          "receiverPhone": "087689654325",
+          "city": "Lombok Tengah",
+          "cityId": "239",
+          "province": "Nusa Tenggara Barat (NTB)",
+          "provinceId": "22",
+          "street": "Jl. Bapak Xiandi No.200, Lombok, NTB",
+          "createdAt": "2023-12-20T15:01:42.188Z",
+          "updatedAt": "2023-12-20T15:01:42.188Z"
+        }
+      ]
+    },
+    {
+      "userId": 3,
+      "address": [
+        {
+          "addressName": "Rumah Bapak",
+          "receiver": "Bapak",
+          "receiverPhone": "082131313211",
+          "city": "Blitar",
+          "cityId": "74",
+          "province": "Jawa Timur",
+          "provinceId": "11",
+          "street": "Jl. Ini Nama Jalan Jakarta, Kuningan",
+          "createdAt": "2023-12-22T04:19:42.818Z",
+          "updatedAt": "2023-12-22T04:20:45.767Z",
+          "id": 301
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "originAddress": [
+    {
+      "id": 1,
+      "addressName": "JNE Jakarta Selatan",
+      "city": "Jakarta Selatan",
+      "cityId": "153",
+      "province": "DKI Jakarta",
+      "provinceId": "6",
+      "street": "Jl. Ini Nama Jalan Jakarta",
+      "createdAt": "2023-12-04T08:35:32.000Z",
+      "updatedAt": "2023-12-13T16:33:44.749Z"
+    },
+    {
+      "addressName": "Cabang Papua Barat",
+      "city": "Manokwari Selatan",
+      "cityId": "273",
+      "province": "Papua Barat",
+      "provinceId": "25",
+      "street": "Jalan Ir. Soekarno No. 203",
+      "createdAt": "2023-12-13T14:37:54.266Z",
+      "updatedAt": "2023-12-13T16:34:45.930Z",
+      "id": 2
+    }
+  ],
+  "shipping": [
+    {
+      "id": 1,
+      "userId": 2,
+      "shippingDetails": [
+        {
+          "id": "3572915643",
+          "length": "20",
+          "width": "10",
+          "height": "30",
+          "weight": "2",
+          "receiver": "Joko",
+          "receiverPhone": "081231313",
+          "origin": "Jakarta Selatan",
+          "originFull": "Jl. Ini Nama Jalan Jakarta, Jakarta Selatan,  DKI Jakarta",
+          "destination": "Jakarta Selatan",
+          "destinationFull": "Jl. Ini Nama Jalan Jakarta, Jakarta Selatan,\n            DKI Jakarta",
+          "costBefore": 46000,
+          "costAfter": 46000,
+          "status": "Pending",
+          "promoUsed": "",
+          "discountAmount": 0,
+          "category": "3",
+          "categoryCost": 36000,
+          "addOn": "2",
+          "addOnCost": 10000,
+          "review": 0,
+          "createdAt": "2023-12-20T08:51:28.494Z",
+          "updatedAt": "2023-12-20T08:51:28.494Z"
+        },
+        {
+          "id": "3406136399",
+          "length": "20",
+          "width": "10",
+          "height": "30",
+          "weight": "10",
+          "receiver": "Joko",
+          "receiverPhone": "081231313",
+          "origin": "Jakarta Selatan",
+          "originFull": "Jl. Ini Nama Jalan Jakarta, Jakarta Selatan,  DKI Jakarta",
+          "destination": "Jakarta Selatan",
+          "destinationFull": "Jl. Ini Nama Jalan Jakarta, Jakarta Selatan,\n            DKI Jakarta",
+          "costBefore": 205000,
+          "costAfter": 205000,
+          "status": "Pending",
+          "promoUsed": "",
+          "discountAmount": 0,
+          "category": "3",
+          "categoryCost": 180000,
+          "addOn": "1",
+          "addOnCost": 25000,
+          "review": 0,
+          "createdAt": "2023-12-20T08:51:28.494Z",
+          "updatedAt": "2023-12-20T08:51:28.494Z"
+        },
+        {
+          "id": "2318787835",
+          "length": "20",
+          "width": "20",
+          "height": "20",
+          "weight": "2",
+          "receiver": "Xoxo",
+          "receiverPhone": "081234567890",
+          "origin": "Jakarta Selatan",
+          "originFull": "Jl. Ini Nama Jalan Jakarta, Jakarta Selatan,  DKI Jakarta",
+          "destination": "Bandar Lampung",
+          "destinationFull": "Jl. Ikan Hiu No.20, Teluk Betung Selatan, Teluk Betung, Bandar Lampung,\n            Lampung",
+          "costBefore": 65000,
+          "costAfter": 52000,
+          "status": "Finished",
+          "promoUsed": "SHOURIERPROMO",
+          "discountAmount": 13000,
+          "category": "2",
+          "categoryCost": 40000,
+          "addOn": "1",
+          "addOnCost": 25000,
+          "review": 4,
+          "createdAt": "2023-12-22T04:19:14.157Z",
+          "updatedAt": "2023-12-22T04:33:41.232Z"
+        }
+      ]
+    },
+    {
+      "userId": 3,
+      "shippingDetails": [],
+      "id": 2
+    }
+  ]
+}
