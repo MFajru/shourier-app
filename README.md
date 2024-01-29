@@ -1,4 +1,4 @@
-# Assignment Next JS - Courier Application Theme
+# Courier Application
 
 # Shourier App
 
